@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5035517280875205868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5035517280875205870}
+  - component: {fileID: 5035517280875205871}
+  m_Layer: 0
+  m_Name: PipeDrawer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5035517280875205870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035517280875205868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5035517280875205871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035517280875205868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659d6fd39d766644bab08602f2ab513c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RToU: {fileID: 7043867376621737298, guid: 5b36e44f207d8764284643a730291a25, type: 3}
+  LToU: {fileID: 7043867376621737298, guid: 23f4de115c1e0af4fa6074697c80a20d, type: 3}
+  DToU: {fileID: 3540295143876059758, guid: 3fc78493ad5ce5f48acaf402cd72c8be, type: 3}
+  RToD: {fileID: 3260632328027645127, guid: 7e561d401c96f5448ad716b48db41946, type: 3}
+  LToD: {fileID: 3260632328027645127, guid: 95acef7d453ef2745b2cf4fbcbb47ed1, type: 3}
+  UToD: {fileID: 3540295143876059758, guid: 0aca02b0c49aada41b5eaacd4bc8033e, type: 3}
+  LToR: {fileID: 3540295143876059758, guid: 4708c129318e3754084bafb0e04097ec, type: 3}
+  DToR: {fileID: 3260632328027645127, guid: 361bbbd9f43c63b4cb9b3916a3ab1130, type: 3}
+  UToR: {fileID: 7043867376621737298, guid: 3cba0e3da08ba104d89029e015db44b2, type: 3}
+  RToL: {fileID: 3540295143876059758, guid: 6e600bed33893c04f9adb716c3c707e4, type: 3}
+  DToL: {fileID: 3260632328027645127, guid: d5e44092d6bc3f14f94a17a60fad26fe, type: 3}
+  UToL: {fileID: 7043867376621737298, guid: 2c673a84541809e4486b556c3a7a01e0, type: 3}
