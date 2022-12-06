@@ -9,7 +9,7 @@ public class Toolbox : MonoBehaviour
 	public GameObject MixerPrefab;
 	public GameObject TowerPrefab;
 	public GameObject ReservoirPrefab;
-
+	public GameObject CombinerPrefab;
 
 	public void SetTool_CondenserTower()
 	{
@@ -33,6 +33,13 @@ public class Toolbox : MonoBehaviour
 		currentTool = Instantiate(MixerPrefab);
 	}
 
+	public void SetTool_Combiner()
+	{
+		if (currentTool != null)
+			Destroy(currentTool);
+
+		currentTool = Instantiate(CombinerPrefab);
+	}
 
 	private void Update()
 	{

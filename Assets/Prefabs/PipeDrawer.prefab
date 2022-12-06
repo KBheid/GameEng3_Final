@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5035517280875205870}
   - component: {fileID: 5035517280875205871}
+  - component: {fileID: 268325405}
+  - component: {fileID: 268325406}
   m_Layer: 0
   m_Name: PipeDrawer
   m_TagString: Untagged
@@ -55,3 +57,39 @@ MonoBehaviour:
   RToL: {fileID: 3540295143876059758, guid: 6e600bed33893c04f9adb716c3c707e4, type: 3}
   DToL: {fileID: 3260632328027645127, guid: d5e44092d6bc3f14f94a17a60fad26fe, type: 3}
   UToL: {fileID: 7043867376621737298, guid: 2c673a84541809e4486b556c3a7a01e0, type: 3}
+--- !u!114 &268325405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035517280875205868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b039fb0d4df660844b9ead0b9f59642d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &268325406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035517280875205868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d55a94f2e48fb74da591e375c933830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEffects: 2
+  maxEffects: 5
+  effects:
+  - {fileID: 11400000, guid: d0875e32a3ba823478dc7283df6beebb, type: 2}
+  - {fileID: 11400000, guid: db7b4dc279cc9254b9b4edf563e18a25, type: 2}
+  - {fileID: 11400000, guid: e8dab96c585383a4d95a8ef110ca3128, type: 2}
+  - {fileID: 11400000, guid: 4500054c7d0781d4eb32f9a0da0528c7, type: 2}
+  currentQuestRequirements:
+  - {fileID: 11400000, guid: db7b4dc279cc9254b9b4edf563e18a25, type: 2}
+  - {fileID: 11400000, guid: db7b4dc279cc9254b9b4edf563e18a25, type: 2}
+  - {fileID: 11400000, guid: e8dab96c585383a4d95a8ef110ca3128, type: 2}
+  - {fileID: 11400000, guid: e8dab96c585383a4d95a8ef110ca3128, type: 2}

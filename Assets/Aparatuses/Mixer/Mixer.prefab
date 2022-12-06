@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2370870730476772400}
   - component: {fileID: 2370870730476772415}
   - component: {fileID: 476345087484345348}
+  - component: {fileID: -6104356557459397399}
   m_Layer: 6
   m_Name: Mixer
   m_TagString: Untagged
@@ -146,6 +147,18 @@ MonoBehaviour:
   anim: {fileID: 2370870731775430206}
   sprite: {fileID: 2370870731775430207}
   mixTime: 3
+--- !u!114 &-6104356557459397399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370870730476772414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ac782d23272c846b9e3625c9dc9c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2370870730814451426
 GameObject:
   m_ObjectHideFlags: 0

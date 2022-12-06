@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable
+public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable, IEffectHolder
 {
 	[SerializeField] Animator anim;
 	[SerializeField] SpriteRenderer sprite;
@@ -14,7 +14,7 @@ public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable
 	private bool playedMixNoise = false;
 	private int stage;
 	private readonly int stageCount = 4;
-	private PlantData data;
+	private IngredientData data;
 
 	private ILiquidReceiver receiver;
 
@@ -26,7 +26,7 @@ public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable
 	public void ReceiveDrop(Draggable dragged)
 	{
 		Destroy(dragged.gameObject);
-		data = dragged.GetComponent<Plant>().plantData;
+		data = dragged.GetComponent<Ingredient>().data;
 		hasLiquid = true;
 		playedMixNoise = false;
 		timeMixed = 0f;
@@ -67,12 +67,6 @@ public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable
 		return false;
 	}
 
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -99,5 +93,21 @@ public class Mixer : MonoBehaviour, ILiquidEmitter, IDroppable
 	{
 		anim.SetBool("HasLiquid", hasLiquid);
 		anim.SetInteger("State", stage);
+	}
+
+	public List<Effect> GetEffects()
+	{
+		if (!hasLiquid)
+			return null;
+
+		return currentLiquid.GetEffects();
+	}
+
+	public List<ILiquidReceiver> GetReceivers()
+	{
+		return (receiver == null) ? null : new List<ILiquidReceiver>
+		{
+			receiver
+		};
 	}
 }

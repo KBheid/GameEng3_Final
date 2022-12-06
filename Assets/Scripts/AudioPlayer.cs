@@ -7,6 +7,8 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioSource ingredient_mix;
     [SerializeField] AudioSource ingredient_drop;
     [SerializeField] AudioSource condenser_complete;
+	[SerializeField] AudioSource quest_complete;
+	[SerializeField] AudioSource quest_fail;
 
     public void PlayMix()
 	{
@@ -24,5 +26,19 @@ public class AudioPlayer : MonoBehaviour
 	{
 		if (!condenser_complete.isPlaying)
 			condenser_complete.Play();
+	}
+
+	public void PlayQuestFinish(bool success)
+	{
+		if (success)
+		{
+			if (!quest_complete.isPlaying)
+				quest_complete.Play();
+		}
+		else
+		{
+			if (!quest_fail.isPlaying)
+				quest_fail.Play();
+		}
 	}
 }

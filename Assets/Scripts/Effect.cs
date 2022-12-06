@@ -18,6 +18,9 @@ public class Effect : ScriptableObject
 	public int reverseIndex;
 
 	public Color effectColor;
+
+	[Tooltip("Whether or not this effect will appear in quests.")]
+	public bool questable;
 }
 
 public enum EffectResult

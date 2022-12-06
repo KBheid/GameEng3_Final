@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reservoir : MonoBehaviour, ILiquidReceiver, ILiquidEmitter
+public class Reservoir : MonoBehaviour, ILiquidReceiver, ILiquidEmitter, IEffectHolder
 { 
 	#region Interface override
 	[SerializeField]
@@ -84,5 +84,29 @@ public class Reservoir : MonoBehaviour, ILiquidReceiver, ILiquidEmitter
 	public void SetReceiver(ILiquidReceiver receiver)
 	{
 		Receiver = receiver as Object;
+	}
+
+	public List<Effect> GetEffects()
+	{
+		if (heldLiquid == null)
+			return null;
+
+		return heldLiquid.GetEffects();
+	}
+
+	public List<ILiquidEmitter> GetEmitters()
+	{
+		return (last == null) ? null : new List<ILiquidEmitter>
+		{
+			last
+		};
+	}
+
+	public List<ILiquidReceiver> GetReceivers()
+	{
+		return (next == null) ? null : new List<ILiquidReceiver>
+		{
+			next
+		};
 	}
 }

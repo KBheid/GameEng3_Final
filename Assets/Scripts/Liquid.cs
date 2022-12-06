@@ -59,8 +59,10 @@ public class Liquid
 				return EffectResult.Negated;
 			}
 		}
+
 		color = Color.Lerp(color, e.effectColor, 0.9f);
 		color.a = 1f;
+		effects.Add(e);
 		return EffectResult.Added;
 	}
 

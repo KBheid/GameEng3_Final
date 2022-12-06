@@ -33,7 +33,8 @@ public class LiquidIOSetter : MonoBehaviour
 				foreach (Transform inputLocation in inputLocations)
 				{
 					Switch sw = Instantiate(switchPrefab);
-					input.SetEmitter(sw);
+					if (input != null)
+						input.SetEmitter(sw);
 					sw.Receiver = gameObject.GetComponent<ILiquidReceiver>() as Object;
 					sw.transform.position = inputLocation.position;
 					sw.transform.rotation = inputLocation.rotation;
@@ -53,7 +54,8 @@ public class LiquidIOSetter : MonoBehaviour
 				foreach (Transform outputLocation in outputLocations)
 				{
 					Switch sw = Instantiate(switchPrefab);
-					output.SetReceiver(sw);
+					if (output != null)
+						output.SetReceiver(sw);
 					sw.Emitter = gameObject.GetComponent<ILiquidEmitter>() as Object;
 					sw.transform.position = outputLocation.position;
 					sw.transform.rotation = outputLocation.rotation;
@@ -62,5 +64,14 @@ public class LiquidIOSetter : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	public void ResetInput()
+	{
+		createdInput = false;
+	}
+	public void ResetOutput()
+	{
+		createdOuput = false;
 	}
 }

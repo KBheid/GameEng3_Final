@@ -72,4 +72,20 @@ public class Switch : MonoBehaviour, ILiquidReceiver, ILiquidEmitter
     {
         Receiver = receiver as Object;
     }
+
+    public List<ILiquidEmitter> GetEmitters()
+    {
+        return (last == null) ? null : new List<ILiquidEmitter>
+        {
+            last
+        };
+    }
+
+    public List<ILiquidReceiver> GetReceivers()
+    {
+        return (next == null) ? null : new List<ILiquidReceiver>
+        {
+            next
+        };
+    }
 }

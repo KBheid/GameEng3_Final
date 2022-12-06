@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 2623710572349010557}
   - component: {fileID: 2623710572349010556}
   - component: {fileID: 2623710572349010559}
+  - component: {fileID: 8213739453375764099}
   m_Layer: 6
   m_Name: CondenserTower
   m_TagString: Untagged
@@ -287,6 +288,18 @@ MonoBehaviour:
   hasFuel: 1
   anim: {fileID: 2623710571174216883}
   sprite: {fileID: 2623710571174216882}
+--- !u!114 &8213739453375764099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623710572349010552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ac782d23272c846b9e3625c9dc9c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2623710572385663553
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623710572385663553}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.15, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2623710572349010554}
@@ -341,7 +354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623710572735723638}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.2, y: 0.025, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0.025, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2623710572349010554}

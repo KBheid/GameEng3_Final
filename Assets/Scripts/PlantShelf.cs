@@ -31,7 +31,7 @@ public class PlantShelf : MonoBehaviour
                     go.AddComponent<SpriteRenderer>().sprite = p.plant.sprite;
                     Draggable d = go.AddComponent<Draggable>();
                     d.isPlant = true;
-                    go.AddComponent<Plant>().plantData = p.plant;
+                    go.AddComponent<Ingredient>().data = p.plant;
                     d.StartDragging();
 				}
 			}
@@ -42,6 +42,6 @@ public class PlantShelf : MonoBehaviour
     private struct Pot
 	{
         public GameObject potCollider;
-        public PlantData plant;
+        public IngredientData plant;
 	}
 }
